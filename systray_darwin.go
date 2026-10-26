@@ -112,6 +112,10 @@ func setVisible(visible bool) {
 	C.setVisible((C.bool)(visible))
 }
 
+// requestAttention does nothing, as a status item has no equivalent.
+func requestAttention() {
+}
+
 // SetRemovalAllowed sets whether a user can remove the systray icon or not.
 // This is only supported on macOS.
 func SetRemovalAllowed(allowed bool) {

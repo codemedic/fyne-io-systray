@@ -576,6 +576,10 @@ func setVisible(visible bool) {
 	}
 }
 
+// requestAttention does nothing, as the notification area has no equivalent.
+func requestAttention() {
+}
+
 // winKeyNames maps the platform neutral key names used by SetShortcut to the names
 // that are commonly presented in Windows menus.
 var winKeyNames = map[string]string{

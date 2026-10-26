@@ -203,6 +203,15 @@ func Hide() {
 	setVisible(false)
 }
 
+// RequestAttention asks the user to look at the systray icon, without changing whether it is shown.
+// On Linux the item's Status becomes NeedsAttention, and the host decides how to present it.
+// The request ends when the user clicks the icon or opens its menu, and when the application
+// calls Show or Hide. It is ignored while the icon is hidden.
+// It has no effect on Windows and macOS.
+func RequestAttention() {
+	requestAttention()
+}
+
 // AddMenuItem adds a menu item with the designated title and tooltip.
 // It can be safely invoked from different goroutines.
 // Created menu items are checkable on Windows and OSX by default. For Linux you have to use AddMenuItemCheckbox
